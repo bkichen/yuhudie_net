@@ -1,0 +1,756 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="static/css/index.css" rel="stylesheet" type="text/css" media="screen">
+<link hreflang="zh-cn">
+<script type="text/javascript" src="static/js/analytic.js"></script>
+<script type="text/javascript" src="js/tools.js"></script>
+<title lang="zh-cn">yuhudie.net-多引擎在线病毒扫描网 v1.02，当前支持 47 款杀毒引擎</title>
+
+	<meta name="keywords" content=",,杀毒,杀毒软件,病毒,木马,间谍软件,恶意软件,扫描,扫描一下,在线,在线病毒扫描,病毒扫描,上传,劫持,系统劫持, 特洛伊,rootkit,垃圾邮件, antivir, avast, avg, bitdefender, clamav, drweb, f-prot, f-secure,  fortinet, kaspersky, nod32, norman, virusbuster, panda antivirus, trend micro, norton,  symantec, 小红伞,大蜘蛛,冰岛杀毒,飞塔,卡巴斯基,诺曼,熊猫卫士,趋势,诺顿,赛门铁克,迈卡菲,mcafee,感染,在线扫描,病毒扫描,免费在线扫描">	
+	<meta name="description" content="免费的多引擎可疑文件扫描服务，可以通过多个引擎检测单一的可疑、病毒、木马、恶意等程序">
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?08e32ec74a8a7982c7171bde829b77af";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<script data-ad-client="ca-pub-5662640855743483" async="" src="pagead/js/adsbygoogle.js"></script>
+
+</head>
+<body>
+<!--body onLoad="showlang('zh-cn)"' -->
+<script>  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-59666737-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+<script>
+var f;
+try {// for I.E.
+f = document.createElement('<ifr'+'ame style="display:none" id="upif" name="upif"></iframe>');
+} catch (ex) { //for other browsers, an exception will be thrown
+f = document.createElement('iframe');
+f.id="upif";
+f.name="upif";
+f.style.display="none";
+}
+document.body.insertBefore(f,document.body.childNodes[0]);
+</script>
+
+
+
+
+
+
+
+<!-- Google_ad_section_start(weight=ignore) -->
+<div id="top">
+<div class="logo"><a href="index.html" title="杀毒软件推荐-玉蝴蝶杀毒网"><img data-src="images/logo.gif" alt="杀毒软件推荐-玉蝴蝶杀毒网" border="0" longdesc="https://www.yuhudie.net"></a></div>
+<div class="upload">
+<div class="upload_file">
+<div class="main_content_onesearch">
+
+
+<!--
+<form id="uploadform" enctype="multipart/form-data" target="upif" action="https://www.yuhudie.net/index.php?ctl=urlscan" method="POST">
+<input id="upkey" name="UPLOAD_IDENTIFIER" value="KEY6d4f11e37a597f83e035e5f66826e08d" type="hidden">
+<input id="langkey" name="langkey" value="1" type="hidden">
+<input id="setcookie" name="setcookie" value="1" type="hidden">
+<input id="tempvar" name="tempvar" value="" type="hidden">
+<input style="left: 10px; width: 300px; width:288px; height: 26px; line-height:26px; z-index: 1100; opacity: 0; top: 2px; top: 5px;  position: absolute;" id="upfile" name="upfile" onchange="document.getElementById('fpath').value=this.value" type="file">
+<input class="search_input" id="fpath" readonly="true" name="fpath" type="text">
+<div class="main_searchbutton">
+<img class="main_searchimgtwo" onclick="showprocess()" data-src="https://img.yuhudie.net/images/up.gif" alt="杀毒软件推荐-玉蝴蝶杀毒网" />
+</div>
+</form>
+-->
+
+<!--检测一下form-->
+<form id="urlscanform" action="https://www.yuhudie.net/index.php?ctl=urlscan" onkeydown="if(event.keyCode==13){return false;}" method="POST">
+	<input class="search_input" id="fpath" name="fpath" type="text" placeholder="这里输入要检测的url">
+<input id="setcookie" name="setcookie" value="1" type="hidden">
+<div style="position: absolute;top: 5px;left: 295px;width: 80px;">
+<img onclick="urlshowprocess()" data-src="images/up.gif" alt="杀毒软件推荐-玉蝴蝶杀毒网">
+</div>
+</form>
+
+
+
+</div>
+<p>网站安全从这里开始</p>
+</div> 
+
+    <!-- End Upload Form -->
+</div>
+<div class="language" id="language">
+选择语言<br>
+<select name="selectlang" style="width:100px" onchange="showlang(this)">
+<option label="English" value="en">English</option>
+<option label="简体中文" value="zh-cn">简体中文</option>
+<option label="繁體中文" value="zh-tw">繁體中文</option>
+<option label="한국어" value="ko">한국어</option>
+<option label="日本語" value="ja">日本語</option>
+<option label="Français" value="fr">Français</option>
+<option label="Deutsch" value="de">Deutsch</option>
+<option label="česky" value="cs">česky</option>
+<option label="Portuguese Brazil" value="pt-br">Portuguese Brazil</option>
+<option label="Русский" value="ru">Русский</option>
+<option label="українська" value="uk">українська</option>
+<option label="Nederlands" value="nl">Nederlands</option>
+<option label="Türkçe" value="tr">Türkçe</option>
+<option label="ภาษาไทย" value="th">ภาษาไทย</option>
+<option label="Polski" value="pl">Polski</option>
+<option label="Español (Latin America)" value="es-ar">Español (Latin America)</option>
+<option label="Română" value="ro">Română</option>
+<option label="Italiano" value="it">Italiano</option>
+</select>
+<div class="load">服务器负载<br>
+<img id="load" data-src="images/load/1.gif" alt="Server Load" border="0"></div>
+</div>
+</div>
+
+
+
+
+
+
+<div style="clear:both"></div>
+<script>
+   $E('#language select[name^=selectlang option[value='+Cookie.get('lang')+']').set('selected',true);
+</script>
+<!-- Google_ad_section_end(weight=ignore) --><!--url检测页面-->
+<div id="main">
+<div class="maintd">
+  <div class="left">
+  
+<div class="stylebox">
+<div class="head" title="导航栏"><span><font color="#555">&nbsp;&nbsp;导航栏</font></span></div>
+<div class="nav"> <a id="index" title="首页" href="index.html"><img data-src="images/select.png" alt="杀毒软件推荐-玉蝴蝶杀毒网">&nbsp;&nbsp;<font color="#555555">首页</font></a>
+	<a id="about" title="去往yuhudie.net" href="index.html" target="_blank"><img data-src="images/select.png" alt="杀毒软件推荐-玉蝴蝶杀毒网">&nbsp;&nbsp;<font color="#555555">去往yuhudie.net</font></a>
+	<a id="report" title="查看报告" href="reportlist.html"><img data-src="images/select.png" alt="杀毒软件推荐-玉蝴蝶杀毒网">&nbsp;&nbsp;<font color="#555555">查看报告</font></a>
+	<a id="viruslist" title="病毒报告" href="viruslist.html"><img data-src="images/select.png" alt="杀毒软件推荐-玉蝴蝶杀毒网">&nbsp;&nbsp;<font color="#555555">病毒报告</font></a>
+	<a id="behaviorlist" title="行为报告" href="behaviorlist.html"><img data-src="images/select.png" alt="杀毒软件推荐-玉蝴蝶杀毒网">&nbsp;&nbsp;<font color="#555555">行为报告</font></a>
+	<a title="帮助我们" href="helpus.html"><img data-src="images/select.png" alt="杀毒软件推荐-玉蝴蝶杀毒网">&nbsp;&nbsp;<font color="#555555">帮助我们</font></a>
+	<a title="BUG提交" href="bug.html"><img data-src="images/select.png" alt="杀毒软件推荐-玉蝴蝶杀毒网">&nbsp;&nbsp;<font color="#555555">BUG提交</font></a>
+	<a title="联系我们" href="contacts.html"><img data-src="images/select.png" alt="杀毒软件推荐-玉蝴蝶杀毒网">&nbsp;&nbsp;<font color="#555555">联系我们</font></a>
+	<a title="URL检测" href=""><img data-src="images/select.png" alt="杀毒软件推荐-玉蝴蝶杀毒网">&nbsp;&nbsp;<font color="#555555">URL检测</font></a>
+	<a title="API" href="api/api-zh-cn.html" target="_blank"><img data-src="images/select.png" alt="杀毒软件推荐-玉蝴蝶杀毒网">&nbsp;&nbsp;<font color="#555555">API</font></a>
+			<a title="病毒百科" href="javascript:;"><img data-src="images/select.png" alt="杀毒软件推荐-玉蝴蝶杀毒网">&nbsp;&nbsp;<font color="#555555">病毒百科</font></a>
+		<a title="uploader for windows(test)" href="javascript:;"><img data-src="images/select.png" alt="杀毒软件推荐-玉蝴蝶杀毒网">&nbsp;&nbsp;<font color="#555555">uploader for windows(test)</font></a>
+</div>
+	<div class="bottom"></div>
+</div>
+
+
+
+
+    <!--<div class="ad_first"></div>-->
+	<!-- main menu /--> 
+	    <!-- Powered by -->
+   	<div class="styleboxs">
+			<div class="head" title="支持厂商"><span><font color="#333333"><strong>支持厂商</strong></font></span></div>
+			<div style="margin:15px" align="center">
+			   <a href="antivirusvendor/ahnlab.html" title='安博士V3' rel="nofollow"><img data-src="images/av/ahnlab.gif" alt="安博士V3" border="0"></a><br>
+			   <a href="antivirusvendor/antivir.html" title='AntiVir' rel="nofollow"><img data-src="images/av/antivir_n.gif" alt="AntiVir" border="0"></a><br>
+			   <a href="antivirusvendor/antiy.html" title='安天' rel="nofollow"><img data-src="images/av/antiy.gif" alt="安天" border="0"></a><br>
+			   <a href="antivirusvendor/arcabit.html" title='Arcavir' rel="nofollow"><img data-src="images/av/arcabit-logo-new.png" alt="Arcabit" border="0"></a><br>
+			   <a href="antivirusvendor/avast.html" title='AVAST!' rel="nofollow"><img data-src="images/av/avast.gif" alt="AVAST!" border="0"></a><br>
+			   <a href="antivirusvendor/avg.html" title='AVG' rel="nofollow"><img data-src="images/av/avg.gif" alt="AVG" border="0"></a><br>
+			<a href="index.html" title='baidu' target="_blank" rel="nofollow"><img data-src="images/baidu.gif" alt="baidu" border="0"></a><br>
+			   <a href="antivirusvendor/bitdefender.html" title='BitDefender' rel="nofollow"><img data-src="images/av/bitdefender.gif" alt="BitDefender" border="0"></a><br>
+			   <a href="antivirusvendor/clamav.html" title='ClamAV' rel="nofollow"><img data-src="images/av/clamav.gif" alt="ClamAV" border="0"></a><br>
+			   <a href="antivirusvendor/comodo.html" title='Comodo' rel="nofollow"><img data-src="images/av/comodo.gif" alt="Comodo" border="0"></a><br>
+			<a href="javascript:;" title='CP Secure' rel="nofollow"><img data-src="images/av/cpsecure.gif" alt="CP Secure" border="0"></a><br>
+			   <a href="antivirusvendor/cyren.html" title='Cyren' rel="nofollow"><img data-src="images/av/cyren1.png" alt="Cyren" border="0"></a><br>
+			   <a href="antivirusvendor/drweb.html" title='Dr.Web' rel="nofollow"><img data-src="images/av/drweb.gif" alt="Dr.Web" border="0"></a><br>
+			   <a href="antivirusvendor/defenx.html" title='Defenx' rel="nofollow"><img data-src="images/av/defenx.png" alt="Defenx" border="0"></a><br>
+			   <a href="antivirusvendor/emsisoft.html" title='emsisoft' rel="nofollow"><img data-src="images/av/asquared-logo.gif" alt="a-squared" border="0"></a><br>
+			<a href="javascript:;" title='ESTsecurity' target="_blank" rel="nofollow"><img data-src="images/av/est_logo.png" alt="ESTsecurity" border="0"></a><br>
+				<a href="antivirusvendor/fprot.html" title='F-Prot' rel="nofollow"><img data-src="images/av/f-prot.gif" alt="F-Prot" border="0"></a><br>
+			    <a href="antivirusvendor/fsecure.html" title='F-Secure' rel="nofollow"><img data-src="images/av/f-secure.gif" alt="F-Secure" border="0"></a><br>
+				<a href="antivirusvendor/tws.html" title='费尔' rel="nofollow"><img data-src="images/av/tws.png" alt="费尔" border="0"></a><br>
+			    <a href="antivirusvendor/fortinet.html" title='飞塔' rel="nofollow"><img data-src="images/av/fortinet.gif" alt="飞塔" border="0"></a><br>
+			    <a href="antivirusvendor/gdata.html" title='GData' rel="nofollow"><img data-src="images/av/gdata.gif" alt="GData" border="0"></a><br>
+			    <a href="antivirusvendor/hauri.html" title='ViRobot' rel="nofollow"><img data-src="images/av/hauri.gif" alt="ViRobot" border="0"></a><br>
+			    <a href="antivirusvendor/ikarus.html" title='Ikarus' rel="nofollow"><img data-src="images/av/ikarus.gif" alt="Ikarus" border="0"></a><br>
+			<a href="javascript:;" title='江民杀毒' target="_blank" rel="nofollow"><img data-src="images/av/jiangmin.gif" alt="江民杀毒" border="0"></a><br>
+			    <a href="antivirusvendor/kaspersky.html" title='卡巴斯基' rel="nofollow"><img data-src="images/av/kaspersky.gif" alt="卡巴斯基" border="0"></a><br>
+			<a href="javascript:;" title='金山毒霸' target="_blank" rel="nofollow"><img data-src="images/av/kingsoft_av.gif" alt="金山毒霸" border="0"></a><br>
+			    <a href="antivirusvendor/k7.html" title='K7' rel="nofollow"><img data-src="images/av/k7-logo.png" alt="K7" border="0"></a><br>
+			<a href="javascript:;" title='Microsoft' target="_blank" rel="nofollow"><img data-src="images/av/microsoft.gif" alt="Microsoft" border="0"></a><br>
+			    <a href="antivirusvendor/nod32.html" title='NOD32' rel="nofollow"><img data-src="images/av/nod32.gif" alt="NOD32" border="0"></a><br>
+			<a href="javascript:;" title='Norman' target="_blank" rel="nofollow"><img data-src="images/av/norman.gif" alt="Norman" border="0"></a><br>
+			    <a href="antivirusvendor/nano.html" title='Nano' rel="nofollow"><img data-src="images/av/nano_log.gif" alt="Nano" border="0"></a><br>
+				<a href="antivirusvendor/panda.html" title='熊猫卫士' rel="nofollow"><img data-src="images/av/panda.gif" alt="熊猫卫士" border="0"></a><br>
+			    <a href="antivirusvendor/pcc.html" title='趋势科技' rel="nofollow"><img data-src="images/av/pcc.gif" alt="趋势科技" border="0"></a><br>
+			    <a href="antivirusvendor/quickheal.html" title='Quick Heal' rel="nofollow"><img data-src="images/av/quickheal.gif" alt="Quick Heal" border="0"></a><br>
+			<a href="javascript:;" title='瑞星' target="_blank" rel="nofollow"><img data-src="images/av/rising.gif" alt="瑞星" border="0"></a><br>
+			    <a href="antivirusvendor/sophos.html" title='Sophos' rel="nofollow"><img data-src="images/av/sophos.gif" alt="Sophos" border="0"></a><br>
+			    <a href="antivirusvendor/sunbelt.html" title='Sunbelt' rel="nofollow"><img data-src="images/av/sunbelt.gif" alt="Sunbelt" border="0"></a><br>
+			    <a href="antivirusvendor/symantec.html" title='赛门铁克' rel="nofollow"><img data-src="images/av/symantec.gif" alt="赛门铁克" border="0"></a><br>
+			<a href="javascript:;" title='深信服' target="_blank" rel="nofollow"><img data-src="images/av/sxf.gif" alt="深信服" border="0"></a><br>
+				<a href="antivirusvendor/systweak.html" title='Systweak' rel="nofollow"><img data-src="images/av/systweak-software.png" alt="Systweak" border="0"></a><br>
+			    <a href="antivirusvendor/tachyon.html" title='nProtect' rel="nofollow"><img data-src="images/av/tachyon.gif" alt="nProtect" border="0"></a><br>
+			    <a href="antivirusvendor/thehacker.html" title='The Hacker' rel="nofollow"><img data-src="images/av/thehacker.gif" alt="The Hacker" border="0"></a><br>
+			<a href="javascript:;" title='The Hunter' target="_blank" rel="nofollow"><img data-src="images/av/hunter.png" alt="The Hunter" border="0"></a><br>
+			    <a href="antivirusvendor/vba.html" title='VBA32' rel="nofollow"><img data-src="images/av/vba.gif" alt="VBA32" border="0"></a><br>
+			        
+			<a href="javascript:;" title='VirusBuster' target="_blank" rel="nofollow"><img data-src="images/av/virusbuster.gif" alt="VirusBuster" border="0"></a><br>
+			<a href="javascript:;" title='qqphone' target="_blank" rel="nofollow"><img data-src="images/av/tencent_av.gif" alt="qqphone" border="0"></a><br>
+			<a href="javascript:;" title='360' target="_blank" rel="nofollow"><img data-src="images/av/360_av.gif" alt="360" border="0"></a><br>
+			    <a href="antivirusvendor/xvirus.html" title='xvirus' rel="nofollow"><img data-src="images/av/xvirus_logo.png" alt="xvirus" border="0"></a><br>
+			<a href="javascript:;" title='habo' target="_blank" rel="nofollow"><img data-src="images/av/habo.png" alt="habo" border="0"></a><br>
+			<a href="javascript:;" title='threatbook' target="_blank" rel="nofollow"><img data-src="images/av/vb.png" alt="threatbook" border="0"></a><br>
+			<a href="javascript:;" title='hybrid' target="_blank" rel="nofollow"><img data-src="images/av/hybrid.png" alt="hybrid" border="0"></a><br>
+			        
+		  </div>
+		 <div class="bottom">&nbsp;</div>
+	    </div>
+ <!-- Powered by /-->
+	
+
+  </div>
+<div class="right">
+<dl class="lujing"></dl>
+<div class="ad_second"></div>
+
+<!--url检测-->
+
+<dl class="content">
+	  <dt style="font-size:18px;"><font data-localize="menu.virus_list" color="#555">url最近扫描结果</font></dt>
+	  <dd style="padding:10px 0">
+
+		
+		<table width="700px;" border="0" cellpadding="0" cellspacing="1" class="ScannerListTb">
+			<tr>
+				<th nowrap="nowrap" style="font-size:15px;">网址</th>
+				<th nowrap="nowrap" style="font-size:15px;">扫描结果</th>
+			</tr>
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">http://www.mediafire.com/file/xm2ddcnoc5yhpg2/Undertale_vKOR.zip/file</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">ed-sl-a93.fe.core.pw</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">ix-sl-e68.fe.core.pw</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">am3-sl-a135.fe.core.pw</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">am3-sl-a138.fe.core.pw</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">crl.microsoft.com</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">ru.smart-ip.net</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">https://olx.safe-ua.online/</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">broetg.xyz</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">https://broetg.xyz/?uwzz=34347</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">down.znshuru[dot]com/zhuomian/pudding/svc/cld/rpv1.dat?rand=81510</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">http://down.znshuru[dot]com</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">http://pool.ntp.org/</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">https://crackingpatching.com/2020/08/malwarebytes-anti-malware-premium-incl-license.html</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">www.edutrain.cn</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">https://download1235.mediafire.com/xa1m0yjod8mg/80bryf7szin5oui/pyTranscriberPortable_1.5_azo.exe</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">https://msedown.360safe.com</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">https://yoke.yhdtns.com</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">db.testyk.com</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">http://dl.mqhwgl.com/qudao/2018/jianpian_setup_10002.exe</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">http://da.testiu.com/</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">http://m.q.qq.com/a/s/bd7aac42b017ee12da09a51cf8ef434c</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">du.testjj.com</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">192.169.69.25</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">www.cyg2016.xyz</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">https://yourprofitmethod1.life</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">www.pasionmujeres.com</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">https://www.vpnmentor.com/torrent/thepiratebay/</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">http://www.zhinengmeidq.com</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">https://www.urlvoid.com/scan/streaming-vostfr.net/</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">https://signup.zeusfun.net/fr/html/sf/registration/eone_m3dsc.html#&sf=eone&lng=fr&m=movies&skin=night&ref=5195348&prod=21&sub_id=&_sign=b857e6f8e240f6bfa00f7f85fdd923cf&_signt=1609668969&utm_expid=</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">https://www.streaming-vostfr.net/2510-les-poings-contre-les-murs.html</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;"> https://www.by7io4e383ry7qvem4x7d9.pw:52789/</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">http://www.vkdfkc.top</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">https://reworkedgames.eu/installer/manorlords/</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">https://reworkedgames.eu/manor-lords-pc-download/</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">85.255.115.59</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">http://pro-alpinist.ru/</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">http://www.ddooo.com/softdown/181243.htm</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">www.we4game.com</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">https://daum.net</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">daum.net</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">genericrxlf-IU!bb4796a5f1ae</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">https//yourprofitmethod1.life</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">C:\fakepath\unknown迷你世界工具2.4.12.zip</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">showrti.com</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">https://tlauncher.org/en/</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">update</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">http://kerala.me/promo/lights</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+												<tr>
+					<td><p style="font-size:15px;line-height:16px; width:560px; overflow:hidden; white-space: nowrap; text-overflow:hidden;"><a href="javascript:;">btake.cn/tiaoban.php</a></p></td>
+																																																					
+																																<td style="font-size:15px; text-align:center;"><font style="color:green;">访问暂无风险</font></td>
+																</tr>
+				 
+			         
+        </table>
+
+	  </dd>
+</dl>
+
+<dl class="content">
+	    <table class="pager" cellpadding="0" cellspacing="0" style="width:auto"><tr>
+    <td style="padding-right:20px">&nbsp;&nbsp; <span class="borderdown" style="background:#fff; color:#000;font-weight:700;padding:2px 5px">1</span>   <a class="borderup" style="" href="javascript:;">2</a>   <a class="borderup" style="" href="javascript:;">3</a>   <a class="borderup" style="" href="javascript:;">4</a>   <a class="borderup" style="" href="javascript:;">5</a>   <a class="borderup" style="" href="javascript:;">6</a>   <a class="borderup" style="" href="javascript:;">7</a>   <a class="borderup" style="" href="javascript:;">8</a>   <a class="borderup" style="" href="javascript:;">9</a>   <a class="borderup" style="" href="javascript:;">10</a> ... <a class="borderup" style="" href="javascript:;">39</a>   <a class="borderup" style="" href="javascript:;">40</a> &nbsp;<a href="javascript:;" class="sysiconBtnNoIcon" title="下一页">下一页&raquo;</a></td>
+    </tr></table>
+</dl>
+
+<div class="ad_third"></div>
+</div>
+</div>
+
+
+<script type="text/javascript"> 
+document.domain="yuhudie.net";
+
+function urlshowprocess() {
+	
+	var val=document.getElementById('fpath').value;
+	
+	if ($('fpath').value.trim() == '') {
+					alert("请输入要扫描的url");
+				return false;
+	}
+
+	
+	if($('fpath').value.trim()!=""){
+
+		if(checkUrl(val)==false){
+							alert("请确定您输入的url是否正确");
+						return false;
+		}
+    }
+    
+    
+    
+    keys = escape(val);
+	var name_error = 0;
+    new Request.JSON({
+            async: false,
+        	onComplete:function(res){
+        		console.log(res);
+            	if(res.state == 'uploading') {
+					name_error = 1;
+					$('MODALPANEL').setStyle('display','');
+	             	$('dialog_upload').setStyle('display','');
+	             	if(res.flag == 1){
+	             		$('re_scan').setStyle('display','none');
+	             	}
+	             	if(res.time){
+	             		             		document.getElementById('scan_time').innerHTML="该url已被扫描过,在"+res.time;
+	             		             	}
+	             	if(res.find){
+	             		             		document.getElementById('detect_rate').innerHTML="检出率:"+res.find+"/"+res.scan_total;
+	             		             	}
+	             	if(res.sid){
+	             		document.getElementById('info_url').href="https://u.yuhudie.net/urlreport/"+res.sid;
+	             	}
+	             	document.getElementById("scan_url").href="https://www.yuhudie.net/index.php?ctl=urlscan&fpath="+val;
+             	}
+             	
+		   	}
+   // }).get("/uploading.php?urlname="+$('fpath').value.trim());
+   }).get("/uploading.php?urlname="+keys);
+	if (name_error == 1) { return false;}
+	
+    
+    $("urlscanform").submit();
+    
+    
+
+    
+}
+
+
+function checkUrl(urlString){
+	if(urlString!=""){
+	var reg=/[\w\-_]+(\.[\w\-_]+)+([\w\-\.,@?^=%&:/~\+#]*[\w\-\@?^=%&/~\+#])?/;
+	if(!reg.test(urlString)){
+		//alert("请输入正确的url!!!!");
+		return (false);
+		}
+	}
+}
+
+
+function showlang(item)
+{
+   cur_url = window.location.pathname;
+   if(cur_url.indexOf("/language/")==0){
+		go_url = window.parent.location.href.replace(/\/language\/([^/]+)\//,"/language/"+item.value+"/");
+		window.location.assign(go_url);
+   }else{
+	Cookie.remove('lang');
+	Cookie.set('lang', item.value, {domain:'yuhudie.net',path:'/',duration: 300});
+	window.location.reload();
+   }
+}
+
+(function(){
+var src = "https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+
+</script>
+
+
+
+
+<div id="MODALPANEL" style="position: absolute; background:#333333; width: 100%; height: 2050px; top: 0px; left: 0px; z-index: 65500; visibility: visible; opacity: 0.4; display:none;"></div>
+<div id="dialog_upload" class="dialog" style="position: absolute; visibility: visible; opacity: 1; z-index: 65534; width:600px; height:330px; _width:880px; _height:830px; padding:0; overflow:hidden; left: 35%; _left: 31%; top: 120px; display:none;"> 
+<div class="scantable">
+<div style=" width:15px;height:237px; float:left; position:relative; background:url(images/left.png);"></div>
+<div style=" width:537px;height:237px; float:left; position:relative; background:url(images/middle.png) repeat-x;">
+<div style="position:absolute; width:14px; height:14px; right:8px; top:20px;"><img data-src="images/close.png" onclick="window.location.reload()" alt="杀毒软件推荐-玉蝴蝶杀毒网"></div>
+
+<div style="border-bottom:1px solid #ccc; font-size:16px; margin-top:12px; padding-bottom:4px; text-align:left; text-indent:1em; line-height:28px;">url检测</div>
+
+<div style="margin:0; padding-top:20px;" id="upload_tips">
+
+<div style="font-size:12px; text-align:left; text-indent:1em; margin-top:10px; margin-bottom:10px; line-height:20px;" id="scan_time"></div>
+<div style="font-size:12px; text-align:left; text-indent:1em; margin-top:10px; margin-bottom:10px; line-height:20px;" id="detect_rate"></div>
+<div style="font-size:12px; text-align:left; text-indent:1em; margin-top:10px; margin-bottom:10px; line-height:20px;">你可以查看最后一次的扫描结果</div>
+
+	<div id="re_scan" style="position:absolute; bottom:10px; padding:12px 24px; right:210px; no-repeat;"><a href="" id="scan_url"><img data-src="images/leftbutton.gif" alt="杀毒软件推荐-玉蝴蝶杀毒网"></a></div>
+	<div style="position:absolute; bottom:10px; right:20px; padding:12px 12px;no-repeat;"><a href="javascript:;" id="info_url"><img data-src="images/rightbutton.gif" alt="杀毒软件推荐-玉蝴蝶杀毒网"></a></div>
+
+</div>
+
+
+<div style="font-size:12px; text-align:left; text-indent:1em; margin-bottom:20px; line-height:40px;" id="tips"></div>
+
+<div id="upload-progress" style="width:5%">
+<div></div>
+</div>
+
+</div>
+
+<div style="display:none;margin:0; padding:0; position:realate;" id="error_tips">
+<div style="font-size:12px; text-align:left; margin-top:30px; text-indent:1em; line-height:20px;" id="info_desc"></div>
+<div style="font-size:12px; text-align:left; margin-top:10px; text-indent:1em; line-height:20px;" id="info_virus"></div>
+
+
+</div>
+<div style=" width:15px;height:237px; float:left; position:relative; background:url(images/right.png);"></div>
+</div>
+<div style="clear:both"></div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+<div id="bottom"></div>
+<div style="clear:both"></div>
+<div id="footnav">
+  <a href="about.html">关于杀毒软件推荐-玉蝴蝶杀毒网</a>  |  
+  <a href="policy.html">免责声明</a>  |  
+  <a href="contacts.html">联系我们</a>  |  
+  <a href="link.html">友情链接</a>  |  
+  <a href="helpus.html">帮助我们</a>
+  
+</div>
+<!-- footnav /-->
+
+
+<div id="inpo">
+	<a href="javascript:;" target="_blank"><img data-src="images/powered_by_centos.png" alt="Powered By CentOS" border="0"></a><a style="cursor: pointer;" title="哈公网监备2301001826号" href="javascript:;" target="_blank"><img data-src="images/police.gif" alt="pol" border="0" height="31" width="31"></a>
+</div>
+<div id="infozone">
+	
+	<a target="_blank" href="javascript:;" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+		<p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#666699;">京ICP备11007605号-14</p>
+	</a>
+	<a target="_blank" href="javascript:;" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img data-src="images/icon-police.png" alt="pol" style="float:left;">
+		<p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#666699;">京公网安备 11010802020746号</p>
+	</a>
+</div>
+	
+	
+<script>
+function query(tag) {
+	return Array.from(document.getElementsByTagName(tag));
+}
+var observer = new IntersectionObserver(
+    (changes) => {
+        changes.forEach((change) => {
+            if (change.intersectionRatio > 0) {
+                var img = change.target;
+                img.src = img.dataset.src;
+                observer.unobserve(img);
+            }
+        })
+    }
+)
+query('img').forEach((item) => {
+    observer.observe(item);
+})
+
+</script>
+
+
+
+
+
+</body>
+</html>

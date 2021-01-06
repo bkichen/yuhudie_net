@@ -1,0 +1,83 @@
+*{margin: 0;padding: 0;}
+body{
+	background: #fff;
+	color:#000000;
+}
+
+.navbar-brand{
+	height: auto;
+}
+
+.p-navmenu{
+	margin-bottom: -40px;
+}
+
+.pc-navmenu{
+	margin-top: 40px;
+	margin-left: 0px;
+}
+
+.bg{
+	background-color: #e7e7e7;
+	margin-top: 20px;
+}
+
+.container-fluid span{
+	color:#000000;
+}
+.container-fluid h4{
+	font-weight: bold;
+}
+
+.container font{
+	/*font-weight: bold;*/
+	font-size:18px ;
+	
+}
+
+.menu-list a{
+	font-size: 16px;
+}
+
+.btn-lg{
+	padding: 1px 16px;
+}
+.container p{
+	font-size:16px;
+}
+
+
+.upfile{
+	border: 1px solid gainsboro;  
+	margin-bottom: 20px;
+}
+
+.upfile1{
+	position: absolute;
+	display: none;
+	opacity: 0;  
+}
+
+.search_input{
+	float: left;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	margin-left: 10px;
+}
+
+
+.rule{
+	font-size: 16px;
+	line-height: 25px;
+	margin-top: 20px;
+}
+
+.menu-list{
+	padding-top: 20px;
+}
+
+#phonefootnav {
+   padding:20px 0px 8px 0px;
+   margin:0 auto;
+   background-color:#b9c2ca;
+}

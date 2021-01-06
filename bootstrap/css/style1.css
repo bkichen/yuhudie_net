@@ -1,0 +1,112 @@
+*{margin:0;padding:0;}
+body{
+	background:#fff;
+	color:#000;
+}
+.detail-content {
+            padding-left: 0.4rem;
+            height: 1.3rem;
+            overflow: hidden;
+            p {
+                font-size: 0.28rem;
+                line-height: 1.5;
+                color: @color-txt-subtitle;
+            }
+}
+
+.opened{
+            height: auto;
+}
+
+.ad{
+	background:#ffffff; 
+	#background:url('../img/logo.png') no-repeat; 
+	#padding:70px 0px 35px 0px;
+	height:69px;
+	color:#fff;
+}
+
+.nav_1{
+	
+	#background:url('../img/logo.png') no-repeat; 
+	padding:30px 0px 0px 10px;
+	color:#fff;
+}
+
+.nav_1 a{
+	color:#797575; 
+}
+
+.m-search {
+    display: none;
+}
+.ig{
+	padding-right: 20px;
+	padding-left: 10px;
+}
+.banner{
+		padding-top: 5px;
+}
+
+.tuijian{
+	background:#fff; 
+	color:#797575; 
+}
+
+.tuijian .s1{
+	width:71px;
+	height:1px;
+	border-top:2px solid #ff5e52; 
+	display:inline-block;
+	padding-bottom:10px;
+}
+
+
+.zuoce{
+	background:#fff; 
+	color:#797575; 
+}
+
+.s1{
+	width:71px;
+	height:1px;
+	border-top:2px solid #ff5e52; 
+	display:inline-block;
+	padding-bottom:10px;
+}
+
+
+.main2{
+	background:#c0c0c0;
+}
+
+.sec2{
+	background:#fff;
+}
+
+
+
+@media (max-width: 767px)
+
+{
+  body{
+    margin: 0;
+    padding: 0;
+  }
+}
+@media (max-width: 970px)
+{
+  body{
+    margin: 0;
+    padding: 0;
+  }container-fluid
+}
+@media (max-width: 480px)
+{
+  body{
+    margin: 0;
+    padding: 0;
+  }container-fluid
+}
+
+

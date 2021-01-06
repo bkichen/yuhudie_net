@@ -1,0 +1,551 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="charset=utf-8">
+		<link href="css/style.css" rel="stylesheet" type="text/css" media="screen">
+		<!--<link rel="canonical" href="http://www.yuhudie.net" />-->
+		<title data-localize="top.title"></title>
+		
+		<script src="js/jquery.js" type="text/javascript" ></script>
+		<script src="js/jquery.localize.js" type="text/javascript" ></script>
+		<script src="js/language_cookie.js" type="text/javascript" ></script>
+		<script type="text/javascript">
+			function divlistjs(){
+				var sampleid= document.getElementById("sample");
+				var samplelistid= document.getElementById("sample-list");
+				sampleid.style.display="none";
+				samplelistid.style.display="block";
+			}
+			
+			function divscanjs(){
+				var sampleid= document.getElementById("sample");
+				var samplelistid= document.getElementById("sample-list");
+				var samplescan= document.getElementById("scan");
+				sampleid.style.display="none";
+				samplelistid.style.display="none";
+				samplescan.style.display="block";
+			}
+			
+			
+			function divipjs(){
+				var sampleid= document.getElementById("sample");
+				var samplelistid= document.getElementById("sample-list");
+				var samplescan= document.getElementById("scan");
+				var ip= document.getElementById("evilip");
+				sampleid.style.display="none";
+				samplelistid.style.display="none";
+				samplescan.style.display="none";
+				evilip.style.display="block";
+			}
+			
+			/*//js获取地址传参
+			function UrlSearch() 
+			{
+				alert("UrlSearch");
+			   var name,value; 
+			   var str=location.href; //取得整个地址栏
+			   var num=str.indexOf("?") 
+			   str=str.substr(num+1); //取得所有参数   stringvar.substr(start [, length ]
+			
+			   var arr=str.split("&"); //各个参数放到数组里
+			   for(var i=0;i < arr.length;i++){ 
+			    num=arr[i].indexOf("="); 
+			    if(num>0){ 
+			     name=arr[i].substring(0,num);
+			     value=arr[i].substr(num+1);
+			     this[name]=value;
+			     } 
+			    } 
+			    alert(value);
+			    SetCookie(name,value);
+			    location.reload();
+			    
+			} */
+			//var Request=new UrlSearch(); //实例化
+			//alert(Request.lang);
+			//SetCookie(name,Request.lang);
+		</script>
+	</head>
+	<body>
+		
+		<div class="main">
+			<div class="top">
+				<img src="../images/logo.gif" alt="">
+				<div class="language" id="language">
+					<font style="color:#4f6677;" data-localize="head.lang"></font>
+					<select name="selectlang" style="width:100px" id="ddlSomoveLanguage" type="text" onchange="chgLang(event);">
+						<option label="English" value="en">English</option>
+						<option label="简体中文" value="zh-cn">简体中文</option>
+						<option label="繁體中文" value="tw">繁體中文</option>
+						<option label="한국어" value="ko">한국어</option>
+						<option label="日本語" value="ja">日本語</option>
+						<option label="Français" value="fr">Français</option>
+						<option label="Deutsch" value="de">Deutsch</option>
+						<option label="česky" value="cs">česky</option>
+						<option label="Portuguese Brazil" value="pt">Portuguese Brazil</option>
+						<option label="Русский" value="ru">Русский</option>
+						<option label="українська" value="uk">українська</option>
+						<option label="Nederlands" value="nl">Nederlands</option>
+						<option label="Türkçe" value="tr">Türkçe</option>
+						<option label="ภาษาไทย" value="th">ภาษาไทย</option>
+						<option label="Polski" value="pl">Polski</option>
+						<option label="Español (Latin America)" value="es-ar">Español (Latin America)</option>
+						<option label="Română" value="ro">Română</option>
+						<option label="Italiano" value="it">Italiano</option>
+					</select>
+					
+				</div>
+			
+			</div>
+			<div id="left-menu">
+				<div id="home">
+					<div></div>
+				</div>
+				
+				<div id="api">
+					<a href="../index.html" target="_blank"><p data-localize="menu.site"></p></a>
+					<a href=""><p data-localize="menu.sample"></p></a>
+					<a href="#" onclick="divlistjs();"><p data-localize="menu.samplelist"></p></a>
+					<a href="#" onclick="divscanjs();"><p data-localize="menu.filescan"></p></a>
+					<a href="#" onclick="divipjs();"><p data-localize="menu.ipdownload"></p></a>
+				</div>
+			</div>
+			<div id="right">
+				
+				<!--sample-->
+				<div id="sample" style="border-top:0;">
+					<p data-localize="top.contacts"></p>
+					<div id="sample-title" style="border-top:1px solid #d8d8d8;">
+						<h3>/api_file_down</h3>
+						<font data-localize="menu.sample"></font>
+						
+					</div>
+				
+					<span id="get">get</span><font id="addr">https://api.yuhudie.net/api_file_down/api_file_down.php</font>
+					<div id="curl">
+						<div id="php"><font>PHP</font></div>
+						<div id="intro"><font>https://api.yuhudie.net/api_file_down/api_file_down.php?md5=5ef1edbf2dc451b5d5ec60c348b125d2&partner=XXX&key=XXX&type=file</font></div>
+					</div>
+					<div id="right-sample">
+						<h3 data-localize="right-sample.request_param"><!--请求参数--></h3>
+						<div id="query">
+							<fieldset id="file-report">
+								<div id="query-param">
+									<div class="form-group">
+										<lable class="crontrol-lable" for="file-report partner">partner</lable>
+										<span class="required">*</span>
+										<span id="string">string</span>
+									</div>
+									<div id="file-report_partner">
+										<span data-localize="right-sample.username"></span>
+									</div>
+								</div>
+								
+								<div id="query-param">
+									<div class="form-group">
+										<lable class="crontrol-lable" for="file-report partner">key</lable>
+										<span class="required">*</span>
+										<span id="string">string</span>
+									</div>
+									<div id="file-report_partner">
+										<span data-localize="right-sample.password"></span>
+									</div>
+								</div>
+								
+								<div id="query-param">
+									<div class="form-group">
+										<lable class="crontrol-lable" for="file-report partner">type:file</lable>
+										<span class="required">*</span>
+										<span id="string">string</span>
+									</div>
+									<div id="file-report_partner">
+										<span data-localize="menu.sample"></span>
+									</div>
+								</div>
+								
+								<div id="query-param">
+									<div class="form-group">
+										<lable class="crontrol-lable" for="file-report partner">md5</lable>
+										<span class="required">*</span>
+										<span id="string">string</span>
+									</div>
+									<div id="file-report_partner">
+										<span data-localize="right-sample.md5"></span>
+									</div>
+								</div>
+							
+							</fieldset> 
+						</div>
+					</div>
+					
+					<div class="sample-intro">
+						<h3 data-localize="right-sample.api_intro"></h3>
+						
+							<span>1</span><font data-localize="right-sample.sample_intro1"></font><br><br>
+							<span>2</span><font data-localize="right-sample.sample_intro2"></font><br><br>
+							<span>3</span><font data-localize="right-sample.sample_intro3"></font><br><br>
+					</div>
+					
+					<div class="status-code">
+						<h3 data-localize="right-sample.status_msg"></h3>
+						
+							<span>200</span><font data-localize="right-sample.status_code200"></font><br><br>
+							<span>202</span><font data-localize="right-sample.status_code202"></font><br><br>
+							<span>203</span><font data-localize="right-sample.status_code203"></font><br><br>
+							<span>400</span><font data-localize="right-sample.status_code400"></font><br><br>
+							<span>404</span><font data-localize="right-sample.status_code403"></font><br><br>
+					</div>
+				</div>
+				
+				
+				<!--sample list-->
+				<div id="sample-list" style="border-top:0;">
+					<p data-localize="top.contacts"></p>
+					<div id="sample-title" style="border-top:1px solid #d8d8d8;">
+						<h3>/api_file_down</h3>
+						<font data-localize="menu.samplelist"></font>
+						
+					</div>
+				
+					<span id="get">get</span><font id="addr">https://api.yuhudie.net/api_file_down/api_file_down.php</font>
+					<div id="curl">
+						<div id="php"><font>PHP</font></div>
+						<div id="intro"><font>https://api.yuhudie.net/api_file_down/api_file_down.php?partner=XXX&key=XXX&type=filelist&time=2019042501</font></div>
+					</div>
+					<div id="right-sample">
+						<h3 data-localize="right-sample.request_param"></h3>
+						<div id="query">
+							<fieldset id="file-report">
+								<div id="query-param">
+									<div class="form-group">
+										<lable class="crontrol-lable" for="file-report partner">partner</lable>
+										<span class="required">*</span>
+										<span id="string">string</span>
+									</div>
+									<div id="file-report_partner">
+										<span data-localize="right-sample.username"></span>
+									</div>
+								</div>
+								
+								<div id="query-param">
+									<div class="form-group">
+										<lable class="crontrol-lable" for="file-report partner">key</lable>
+										<span class="required">*</span>
+										<span id="string">string</span>
+									</div>
+									<div id="file-report_partner">
+										<span data-localize="right-sample.password"></span>
+									</div>
+								</div>
+								
+								<div id="query-param">
+									<div class="form-group">
+										<lable class="crontrol-lable" for="file-report partner">type:filelist</lable>
+										<span class="required">*</span>
+										<span id="string">string</span>
+									</div>
+									<div id="file-report_partner">
+										<span data-localize="menu.samplelist"></span>
+									</div>
+								</div>
+								<div id="query-param">
+									<div class="form-group">
+										<lable class="crontrol-lable" for="file-report partner">time</lable>
+										<span class="required">*</span>
+										<span id="string">string</span>
+									</div>
+									<div id="file-report_partner">
+										<span data-localize="right-sample.time"></span>
+									</div>
+								</div>
+							
+							</fieldset> 
+						</div>
+					</div>
+					
+               
+					<div class="sample-intro-list">
+						<h3 data-localize="right-sample.api_intro"></h3>
+							<span>1</span><font data-localize="right-sample.samplelist_intro1"></font><br><br>
+							<span>2</span><font data-localize="right-sample.samplelist_intro2"></font><br><br>
+							<span>3</span><font data-localize="right-sample.samplelist_intro3"></font><br><br>
+							<span>4</span><font data-localize="right-sample.samplelist_intro4"></font><br><br>
+							<span>5</span><font data-localize="right-sample.samplelist_intro5"></font><br><br>
+						
+					</div>
+					
+					<div class="status-code">
+						<h3 data-localize="right-sample.status_msg"></h3>
+						
+							<span>200</span><font data-localize="right-sample.status_code200"></font><br><br>
+							<span>202</span><font data-localize="right-sample.status_code202"></font><br><br>
+							<span>203</span><font data-localize="right-sample.status_code203"></font><br><br>
+							<span>400</span><font data-localize="right-sample.status_code400"></font><br><br>
+							<span>404</span><font data-localize="right-sample.status_code403"></font><br><br>
+					</div>
+				</div>
+				<!--samplelist end-->
+				
+				
+				
+				
+				
+				
+				
+				
+				<!--scan style="dispaly:none;"-->
+				<div id="scan" style="display:none; ">
+					<div id="scan-intro"> 
+						1.<font data-localize="right-sample.scan_rule1"></font><br>
+						2.<font data-localize="right-sample.scan_rule2"></font><b data-localize="top.email" style="color:black;"></b><br>
+						<span id="tips" data-localize="right-sample.scan_tips"></span>：<font data-localize="right-sample.scan_rule3"></font><br>
+						<font data-localize="right-sample.scan_rule4"></font>
+					</div>
+					<div id="sample-title" style="border-top:1px solid #d8d8d8;">
+						<h3>/filescan</h3>
+						<font data-localize="right-sample.scan_title"></font>
+						
+					</div>
+				
+					<span id="get">post</span><font id="addr">https://api.yuhudie.net/api_file_upload/upfile/up.php</font>
+					<div id="filescan">
+						<div id="php"><font data-localize="right-sample.upfile"></font></div>
+						<div id="intro">
+							<font>
+								function upfile($path){ <br>
+									$url = "https://api.yuhudie.net/api_file_upload/upfile/up.php";<br>
+									$post_data = array(<br>
+										"partner"=>'XXX', //username<br>
+										"key"=>'XXX',<br>
+										"file" => new \CURLFile(realpath($path))&nbsp;//File address uploaded by user<br>
+									);<br>
+									$ch = curl_init();<br>
+									curl_setopt($ch , CURLOPT_URL , $url);<br>
+									curl_setopt($ch , CURLOPT_POST, 1);<br>
+									curl_setopt($ch , CURLOPT_POSTFIELDS, $post_data);<br>
+									curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);<br>   
+									curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);<br>
+									curl_setopt($ch , CURLOPT_RETURNTRANSFER, 1);<br>
+									$output = curl_exec($ch);<br>
+									curl_close($ch);<br>
+									return $output;<br>
+								}<br>
+							</font>
+						</div>
+						<div id="kongbai" style="background-color:white; height:40px ;"></div>
+						<div id="php"><font data-localize="right-sample.call_back"></font></div>
+						<div id="intro">
+							<font>
+								$post_data = array(<br>
+									"date" => $date<br>
+									);<br>
+								$curl = curl_init();<br>
+								curl_setopt($curl, CURLOPT_TIMEOUT, 1);<br>
+								curl_setopt($curl, CURLOPT_URL, $callback);<br>
+								curl_setopt($curl, CURLOPT_HEADER, 1);<br>
+								curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);<br>
+								curl_setopt($curl, CURLOPT_POST, 1);<br>
+								curl_setopt($curl, CURLOPT_POSTFIELDS, $post_data);<br>
+								$re = curl_exec($curl);<br>
+								curl_close($curl);<br>
+
+							</font>
+						</div>
+					</div>
+					<div id="right-sample">
+						<h3 data-localize="right-sample.request_param"></h3>
+						<div id="query">
+							<fieldset id="file-report">
+								<div id="query-param">
+									<div class="form-group">
+										<lable class="crontrol-lable" for="file-report partner">partner</lable>
+										<span class="required">*</span>
+										<span id="string">string</span>
+									</div>
+									<div id="file-report_partner">
+										<span data-localize="right-sample.username"></span>
+									</div>
+								</div>
+								
+								<div id="query-param">
+									<div class="form-group">
+										<lable class="crontrol-lable" for="file-report partner">key</lable>
+										<span class="required">*</span>
+										<span id="string">string</span>
+									</div>
+									<div id="file-report_partner">
+										<span data-localize="right-sample.password"></span>
+									</div>
+								</div>
+								
+								<div id="query-param">
+									<div class="form-group">
+										<lable class="crontrol-lable" for="file-report partner">callback_url</lable>
+										<span class="required">*</span>
+										<span id="string">json</span>
+									</div>
+									<div id="file-report_partner">
+										<span data-localize="right-sample.panter_rule"></span>
+									</div>
+								</div>
+								
+							</fieldset> 
+						</div>
+					</div>
+					
+               
+					<div class="sample-intro-list">
+						<h3 data-localize="right-sample.api_intro"></h3>
+							<span>1</span><font data-localize="right-sample.scan_intro1"></font><br><br>
+							<span>2</span><font data-localize="right-sample.scan_intro2"></font><br><br>
+							<span>3</span><font data-localize="right-sample.scan_intro3"></font><br><br>
+					</div>
+					
+					<div class="status-code">
+						<h3 data-localize="right-sample.status_msg"></h3>
+						
+							<span>200</span><font data-localize="right-sample.status_code200"></font><br><br>
+							<span>202</span><font data-localize="right-sample.status_code202"></font><br><br>
+							<span>203</span><font data-localize="right-sample.status_code203"></font><br><br>
+							<span>400</span><font data-localize="right-sample.status_code4000"></font><br><br>
+							<span>402</span><font data-localize="right-sample.status_code402"></font><br><br>
+							<span>403</span><font data-localize="right-sample.status_code403s"></font><br><br>
+							<span>404</span><font data-localize="right-sample.status_code404"></font><br><br>
+							<span>401,405,406,407</span><font data-localize="right-sample.status_code400s"></font><br><br>
+					</div>
+				</div>
+				<!--scan end-->
+				
+				
+				
+				
+				<!--恶意ip-->
+				<div id="evilip" style="display:none; border-left:1px solid #d8d8d8;">
+					<p data-localize="top.contacts"></p>
+					<div id="sample-title" style="border-top:1px solid #d8d8d8;">
+						<h3>/ipdownload</h3>
+						<font data-localize="ipdownload.ipdown"></font>
+						
+					</div>
+				
+					<span id="get">post</span><font id="addr">https://api.yuhudie.net/ipdownload/ip_download.php</font>
+					<div id="filescan">
+						<div id="php"><font data-localize="ipdownload.example"></font></div>
+						<div id="intro">
+							<font>
+								$url = "https://api.yuhudie.net/ipdownload/ip_download.php";<br>
+								$post_data = array(<br>
+									"partner"=>'username', <br>
+									"key"=>'apikey',<br>
+								    "ip"=>'ip'	<br>
+								);<br>
+								$ch = curl_init();<br>
+								curl_setopt($ch , CURLOPT_URL , $url);<br>
+								curl_setopt($ch , CURLOPT_POST, 1);<br>
+								curl_setopt($ch , CURLOPT_POSTFIELDS, $post_data);<br>
+								curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE); <br>   
+								curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);<br>
+								curl_setopt($ch , CURLOPT_RETURNTRANSFER, 1);<br>
+								$output = curl_exec($ch);<br>
+								curl_close($ch);<br><br>
+							</font>
+						</div>
+						
+					</div>
+					<div id="right-sample">
+						<h3 data-localize="right-sample.request_param"></h3>
+						<div id="query">
+							<fieldset id="file-report">
+								<div id="query-param">
+									<div class="form-group">
+										<lable class="crontrol-lable" for="file-report partner">partner</lable>
+										<span class="required">*</span>
+										<span id="string">string</span>
+									</div>
+									<div id="file-report_partner">
+										<span data-localize="right-sample.username"></span>
+									</div>
+								</div>
+								
+								<div id="query-param">
+									<div class="form-group">
+										<lable class="crontrol-lable" for="file-report partner">key</lable>
+										<span class="required">*</span>
+										<span id="string">string</span>
+									</div>
+									<div id="file-report_partner">
+										<span data-localize="right-sample.password"></span>
+									</div>
+								</div>
+								
+								<div id="query-param">
+									<div class="form-group">
+										<lable class="crontrol-lable" for="file-report partner">ip</lable>
+										<span class="required">*</span>
+										<span id="string">string</span>
+									</div>
+									<div id="file-report_partner">
+										<span data-localize="ipdownload.addr"></span>
+									</div>
+								</div>
+								
+							</fieldset> 
+						</div>
+					</div>
+					
+               
+					<div class="sample-intro-list">
+						<h3 data-localize="right-sample.api_intro"></h3>
+							<span>1</span><font data-localize="ipdownload.user_down"></font><br><br>
+							
+					</div>
+					
+					<div class="status-code">
+						<h3 data-localize="right-sample.status_msg"></h3>
+						<!--
+						<table border="1px solid gray;" cellspacing="0" cellpadding="0">
+							<tr>
+								<th>status</th>
+								<th>msg</th>
+							</tr>
+							<tr>
+								<td>400</td>
+								<td>Password can not be null</td>
+							</tr>
+							<tr>
+								<td>400</td>
+								<td>Username can not be null</td>
+							</tr>
+							<tr>
+								<td>400</td>
+								<td>Username input error</td>
+							</tr>
+						</table>
+						-->
+							<font><span>status:</span>400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>msg:</span> Password can not be null</font><br><br>
+							<font><span>status:</span>400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>msg:</span> Username can not be null</font><br><br>
+							<font><span>status:</span>400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>msg:</span> Username input error</font><br><br>
+							<font><span>status:</span>400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>msg:</span> Key input error</font><br><br>
+							<font><span>status:</span>400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>msg:</span> IP input error</font><br><br>
+							<font><span>status:</span>202&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>msg:</span> Access per minute exceeded the limit</font><br><br>
+							<font><span>status:</span>203&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>msg:</span> Daily visits exceed the limit</font><br><br>
+					</div>
+				</div>
+				<!--ip end-->
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+		</div>
+		
+		
+		
+	</body>
+</html>
+</html>
